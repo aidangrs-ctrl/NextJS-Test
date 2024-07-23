@@ -8,7 +8,7 @@ const nextConfig = {
         hostname: "**.unsplash.com"
       }
     ]
-  },
+  }/* ,
   async headers() {
     return [
       {
@@ -21,7 +21,8 @@ const nextConfig = {
         ],
       },
     ]
-  },
-}
+   */
+  }
+//}
 
 module.exports = nextConfig
