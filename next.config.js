@@ -10,13 +10,16 @@ const nextConfig = {
     ]
   },
   async rewrites() {
-    return [
+    return {
       // Basic redirect
-      {
-        source: '/ssg',
-        destination: '/500',
-      }
-    ]
+      beforeFiles: [
+        {
+          source: '/ssg',
+          destination: '/500',
+          has: [{ type: 'query', key: 'overrideMe' }],
+        }
+      ]
+    }
     /* ,
   async headers() {
     return [
