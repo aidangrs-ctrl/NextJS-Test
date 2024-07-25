@@ -8,6 +8,16 @@ export async function getStaticProps() {
   };
 }
 
+export async function getServerSideProps() {
+  await new Promise(r => setTimeout(r, 5000));
+  return {
+    redirect: {
+      destination: "/500",
+      permanent: false,
+    },
+  };
+}
+
 export default function Page({ time }) {
   const title = "Static Site Generation (SSG)";
 
