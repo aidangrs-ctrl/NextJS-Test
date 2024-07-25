@@ -16,7 +16,6 @@ const nextConfig = {
         {
           source: '/ssg',
           destination: '/500',
-          has: [{ type: 'query', key: 'overrideMe' }],
         }
       ]
     }
