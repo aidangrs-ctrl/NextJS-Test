@@ -14,7 +14,7 @@ const nextConfig = {
       // Basic redirect
       {
         source: '/ssg',
-        destination: '/500'
+        destination: '/500',
       }
     ]
     /* ,
