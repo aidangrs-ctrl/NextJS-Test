@@ -9,13 +9,12 @@ const nextConfig = {
       }
     ]
   },
-  async redirects() {
+  async rewrites() {
     return [
       // Basic redirect
       {
         source: '/ssg',
-        destination: '/505',
-        permanent: false
+        destination: '/500'
       }
     ]
     /* ,
