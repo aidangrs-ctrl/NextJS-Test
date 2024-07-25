@@ -8,7 +8,17 @@ const nextConfig = {
         hostname: "**.unsplash.com"
       }
     ]
-  }/* ,
+  },
+  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/ssg',
+        destination: '/505',
+        permanent: false
+      }
+    ]
+    /* ,
   async headers() {
     return [
       {
@@ -23,6 +33,7 @@ const nextConfig = {
     ]
    */
   }
+}
 //}
 
 module.exports = nextConfig

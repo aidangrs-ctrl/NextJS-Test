@@ -1,22 +1,22 @@
 import TestResult from "../components/testresult";
 
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       time: new Date().toISOString(),
-//     },
-//   };
-// }
-
 export async function getStaticProps() {
-  await new Promise(r => setTimeout(r, 5000));
   return {
-    redirect: {
-      destination: "/500",
-      permanent: false,
+    props: {
+      time: new Date().toISOString(),
     },
   };
 }
+
+// export async function getServerSideProps() {
+//   await new Promise(r => setTimeout(r, 5000));
+//   return {
+//     redirect: {
+//       destination: "/500",
+//       permanent: false,
+//     },
+//   };
+// }
 
 export default function Page({ time }) {
   const title = "Static Site Generation (SSG)";
