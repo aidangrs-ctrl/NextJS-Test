@@ -3,7 +3,7 @@ import TestResult from "../components/testresult";
 export async function getServerSideProps() {
   return {
     redirect: {
-      destination: "/ssr-redirect-destination",
+      destination: "/ssg",
       permanent: false,
     },
   };
