@@ -1,14 +1,14 @@
 import TestResult from "../components/testresult";
 
-export async function getStaticProps() {
-  return {
-    props: {
-      time: new Date().toISOString(),
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       time: new Date().toISOString(),
+//     },
+//   };
+// }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   await new Promise(r => setTimeout(r, 5000));
   return {
     redirect: {
